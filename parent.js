@@ -6,27 +6,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
-var friends_service_1 = require('friends.service');
-var DisplayComponent = (function () {
-    function DisplayComponent(friendsService) {
-        this.myName = 'Alice';
-        this.names = friendsService.names;
+//TypeScript
+var ChildComponent = (function () {
+    function ChildComponent() {
+        this.message = "I'm the child";
     }
-    DisplayComponent = __decorate([
+    ChildComponent = __decorate([
         angular2_1.Component({
-            selector: 'display'
+            selector: 'child'
         }),
         angular2_1.View({
-            templateUrl: 'templates/show-properties-template.html',
-            directives: [angular2_1.NgFor, angular2_1.NgIf]
-        }),
-        __param(0, angular2_1.Inject(friends_service_1.FriendsService))
-    ], DisplayComponent);
-    return DisplayComponent;
+            template: "\n    <p> {{ message }} </p>\n  "
+        })
+    ], ChildComponent);
+    return ChildComponent;
 })();
-angular2_1.bootstrap(DisplayComponent, [(friends_service_1.FriendsService)]);
+var ParentComponent = (function () {
+    function ParentComponent() {
+        this.message = 'Im the parent';
+    }
+    ParentComponent = __decorate([
+        angular2_1.Component({
+            selector: 'parent'
+        }),
+        angular2_1.View({
+            template: "\n    <h1>{{ message }}</h1>\n    <child></child>\n  ",
+            directives: [ChildComponent]
+        })
+    ], ParentComponent);
+    return ParentComponent;
+})();
+angular2_1.bootstrap(ParentComponent);
