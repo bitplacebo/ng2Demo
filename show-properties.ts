@@ -1,18 +1,12 @@
 /// <reference path="typings/angular2/angular2.d.ts" />
-import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
+import {Component, View, bootstrap, NgFor, NgIf, Inject} from 'angular2/angular2';
 import {FriendsService} from 'friends.service';
-/*
-class FriendsService {
-  names: Array<string>;
-  
-  constructor() {
-    this.names = ["Aarav", "Martín", "Shannon", "Ariana", "Kai"];
-  }
-}
-*/
+
+
+
 @Component({
-  selector: 'display',
-  bindings: [FriendsService]
+  selector: 'display'
+  
 })
 @View({
    template: `
@@ -23,19 +17,20 @@ class FriendsService {
         {{ name }}
      </li>
   </ul>
+  <p *ng-if="names.length > 6">You have many friends!</p>
 `,
-   directives: [NgFor]
+   directives: [NgFor, NgIf]
 })
 
 class DisplayComponent {
   myName: string;
   names: Array<string>;
-    constructor(friendsService: FriendsService){
-           
-   friendsService = new FriendsService();
+  
+    constructor(@Inject(FriendsService) friendsService){
+      
    this.myName = 'Alice';
    this.names = friendsService.names;
   }
 }
 
-bootstrap(DisplayComponent);
+bootstrap(DisplayComponent, [(FriendsService)]);
