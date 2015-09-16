@@ -4,6 +4,5 @@
         "out": "js/script.js",
         "module": "commonjs",
         "experimentalDecorators": true
-
     }
 }
