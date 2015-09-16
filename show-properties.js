@@ -22,7 +22,7 @@ var DisplayComponent = (function () {
             selector: 'display'
         }),
         angular2_1.View({
-            template: "\n  <p>My name: {{ myName }}</p>\n  <p>Friends: </p>\n  <ul>\n     <li *ng-for=\"#name of names\">\n        {{ name }}\n     </li>\n  </ul>\n  <p *ng-if=\"names.length > 6\">You have many friends!</p>\n",
+            template: "\n  <p>My name: {{ myName }}</p>\n  <p>Friends: </p>\n  <ul>\n     <li *ng-for=\"#name of names\">\n        {{ name }}\n     </li>\n  </ul>\n  <p *ng-if=\"names.length > 3\">You have many friends!</p>\n",
             directives: [angular2_1.NgFor, angular2_1.NgIf]
         }),
         __param(0, angular2_1.Inject(friends_service_1.FriendsService))

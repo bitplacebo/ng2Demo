@@ -17,7 +17,7 @@ import {FriendsService} from 'friends.service';
         {{ name }}
      </li>
   </ul>
-  <p *ng-if="names.length > 6">You have many friends!</p>
+  <p *ng-if="names.length > 3">You have many friends!</p>
 `,
    directives: [NgFor, NgIf]
 })
