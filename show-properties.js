@@ -6,6 +6,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
@@ -25,7 +28,8 @@ var DisplayComponent = (function () {
             templateUrl: 'templates/show-properties-template.html',
             directives: [angular2_1.NgFor, angular2_1.NgIf]
         }),
-        __param(0, angular2_1.Inject(friends_service_1.FriendsService))
+        __param(0, angular2_1.Inject(friends_service_1.FriendsService)), 
+        __metadata('design:paramtypes', [Object])
     ], DisplayComponent);
     return DisplayComponent;
 })();

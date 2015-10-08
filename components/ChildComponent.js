@@ -1,3 +1,4 @@
+/// <reference path="../typings/angular2/angular2.d.ts" />
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
     switch (arguments.length) {
@@ -6,7 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
-/// <reference path="typings/angular2/angular2.d.ts" />
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var angular2_1 = require('angular2/angular2');
 //TypeScript
 var ChildComponent = (function () {
@@ -18,24 +21,12 @@ var ChildComponent = (function () {
             selector: 'child'
         }),
         angular2_1.View({
-            template: "\n    <p> {{ message }} </p>\n  "
-        })
+            template: ' \
+    <p> {{ message }} </p> \
+  '
+        }), 
+        __metadata('design:paramtypes', [])
     ], ChildComponent);
     return ChildComponent;
 })();
-var ParentComponent = (function () {
-    function ParentComponent() {
-        this.message = 'Im the parent';
-    }
-    ParentComponent = __decorate([
-        angular2_1.Component({
-            selector: 'parent'
-        }),
-        angular2_1.View({
-            template: "\n    <h1>{{ message }}</h1>\n    <child></child>\n  ",
-            directives: [ChildComponent]
-        })
-    ], ParentComponent);
-    return ParentComponent;
-})();
-angular2_1.bootstrap(ParentComponent);
+exports.ChildComponent = ChildComponent;
