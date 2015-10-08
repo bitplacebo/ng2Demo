@@ -7,9 +7,9 @@ import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
   selector: 'child'
 })
 @View({
-  template: ' \
-    <p> {{ message }} </p> \
-  '
+  template: ` 
+    <p> {{ message }} </p> 
+  `
 })
 export class ChildComponent {
   message: string;

@@ -6,16 +6,16 @@ import {ChildComponent} from 'components/ChildComponent';
   selector: 'parent'
 })
 @View({
-  template: ' \
-    <h1>{{ message }}</h1> \
-    <child></child> \
-  ',
+  template: `
+    <h1>{{ message }}</h1> 
+    <child></child> 
+  `,
   directives: [ChildComponent]
   
 })
 export class ParentComponent {
   message: string;
   constructor() {
-    this.message = 'Im the parent';
+    this.message = "I'm the parent";
   }
 }

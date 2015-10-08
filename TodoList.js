@@ -6,9 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
 var TodoList = (function () {
@@ -31,8 +28,7 @@ var TodoList = (function () {
         angular2_1.View({
             templateUrl: 'templates/todo-list-template.html',
             directives: [angular2_1.NgFor]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], TodoList);
     return TodoList;
 })();
