@@ -1,8 +1,6 @@
 /// <reference path="../typings/angular2/angular2.d.ts" />
 import {Component, View, bootstrap, NgFor, NgIf, Inject} from 'angular2/angular2';
-import {FriendsService} from 'friends.service';
-
-
+import {FriendsService} from 'models/friends.service';
 
 @Component({
   selector: 'display'

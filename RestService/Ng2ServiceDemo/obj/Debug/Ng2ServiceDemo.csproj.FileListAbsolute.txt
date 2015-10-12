@@ -1,0 +1,6 @@
+C:\SublimeAng2\RestService\Ng2ServiceDemo\bin\Ng2ServiceDemo.dll.config
+C:\SublimeAng2\RestService\Ng2ServiceDemo\bin\Ng2ServiceDemo.dll
+C:\SublimeAng2\RestService\Ng2ServiceDemo\bin\Ng2ServiceDemo.pdb
+C:\SublimeAng2\RestService\Ng2ServiceDemo\obj\Debug\Ng2ServiceDemo.csprojResolveAssemblyReference.cache
+C:\SublimeAng2\RestService\Ng2ServiceDemo\obj\Debug\Ng2ServiceDemo.dll
+C:\SublimeAng2\RestService\Ng2ServiceDemo\obj\Debug\Ng2ServiceDemo.pdb

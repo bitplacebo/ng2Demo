@@ -6,6 +6,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 /// <reference path="../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
 var ChildComponent_1 = require('components/ChildComponent');
@@ -21,7 +24,8 @@ var ParentComponent = (function () {
         angular2_1.View({
             template: "\n    <h1>{{ message }}</h1> \n    <child></child> \n  ",
             directives: [ChildComponent_1.ChildComponent]
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], ParentComponent);
     return ParentComponent;
 })();

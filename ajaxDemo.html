@@ -1,0 +1,13 @@
+﻿<h1>Get team members</h1>
+<div>
+    Team Name: <input [(ng-model)]="_name" />
+</div>
+ <button (click)="hello()">Click</button>
+
+<p *ng-if="names.length > 0">{{ myName }} members:</p>
+<ul>
+    
+    <li *ng-for="#name of names">
+        {{ name }}
+    </li>
+</ul>
